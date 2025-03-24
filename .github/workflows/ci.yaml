@@ -30,10 +30,10 @@ jobs:
         with:
           load: true
           push: false
-          tags: ghcr.io/suro4ek/proxy-ai:latest,ghcr.io/suro4ek/proxy-ai-${{ github.ref_name }}:${{ steps.vars.outputs.sha_short }}
+          tags: ghcr.io/suro4ek/proxy-ai:latest
 
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ghcr.io/suro4ek/proxy-ai:latest,ghcr.io/suro4ek/proxy-ai-${{ github.ref_name }}:${{ steps.vars.outputs.sha_short }}
+          tags: ghcr.io/suro4ek/proxy-ai:latest
